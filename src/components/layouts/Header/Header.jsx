@@ -3,9 +3,9 @@ import '../../../styles/main.css';
 
 export default function Header() {
   return (
-    <header className="Header">
+    <div>
       <div className="flex flex-row items-center justify-between bg-teal-500 p-6">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <div className="flex flex-grow-0 items-center flex-shrink-0 text-white mr-6">
           <svg
             className="fill-current h-8 w-8 mr-2"
             width="54"
@@ -45,19 +45,19 @@ export default function Header() {
         </div>
         <a
           href="#responsive-header"
-          className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
+          className="block mt-4 flex-grow lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
         >
           Gửi câu hỏi
         </a>
 
         <a
           href="#responsive-header"
-          className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
+          className=" flex-grow block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
         >
           Thông báo của tôi
         </a>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col  flex-grow ">
           <a
             href="#responsive-header"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
@@ -129,6 +129,6 @@ export default function Header() {
           </a>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
