@@ -1,10 +1,10 @@
 import React from 'react';
-import '../../../styles/main.css';
+import HeaderCategory from './headerCategory';
 
 export default function Header() {
   return (
-    <div>
-      <div className="flex flex-row items-center justify-between bg-teal-500 p-6">
+    <div className="bg-teal-500 p-2">
+      <div className="flex flex-row items-center justify-between p-6">
         <div className="flex flex-grow-0 items-center flex-shrink-0 text-white mr-6">
           <svg
             className="fill-current h-8 w-8 mr-2"
@@ -19,12 +19,12 @@ export default function Header() {
             Học tích cực
           </span>
         </div>
-        <div className="relative text-gray-600">
+        <div className="relative text-gray-600 w-1/3">
           <input
             type="search"
             name="serch"
             placeholder="Search"
-            className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
+            className="w-full bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
           />
           <button type="submit" className="absolute right-0 top-0 mt-3 mr-4">
             <svg
@@ -43,90 +43,29 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <a
-          href="#responsive-header"
-          className="block mt-4 flex-grow lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
-        >
-          Gửi câu hỏi
-        </a>
-
-        <a
-          href="#responsive-header"
-          className=" flex-grow block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
-        >
-          Thông báo của tôi
-        </a>
+        <HeaderCategory title="Đặt câu hỏi" />
+        <HeaderCategory title="Thông báo của tôi" />
 
         <div className="flex flex-col  flex-grow ">
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
-          >
-            Đăng nhập
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
-          >
-            Đăng ký
-          </a>
+          <HeaderCategory title="Đăng nhập" />
+          <HeaderCategory title="Đăng ký" />
         </div>
-
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-          <div className="flex flex-row justify-between">
-            <a
-              href="/"
-              className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-            >
-              Đã lưu
-            </a>
-          </div>
-        </div>
+        <a
+          href="/"
+          className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+        >
+          Đã lưu
+        </a>
       </div>
       <div>
-        <div className=" px-8 flex flex-row justify-between bg-teal-500">
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
-          >
-            Hỏi đáp
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white mr-4"
-          >
-            Khoá học
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white"
-          >
-            Thi tự luận
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white"
-          >
-            Đề thi
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white"
-          >
-            Đề ra kỳ này
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white"
-          >
-            Chủ đề
-          </a>
-          <a
-            href="#responsive-header"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-white"
-          >
-            Cập nhật
-          </a>
+        <div className="flex flex-row justify-between">
+          <HeaderCategory title="Hỏi đáp" />
+          <HeaderCategory title="Khoá học" />
+          <HeaderCategory title="Thi tự luận" />
+          <HeaderCategory title="Đề thi" />
+          <HeaderCategory title="Đề ra kỳ này" />
+          <HeaderCategory title="Chủ đề" />
+          <HeaderCategory title="Cập nhật" />
         </div>
       </div>
     </div>
